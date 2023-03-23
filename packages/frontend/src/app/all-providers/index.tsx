@@ -1,8 +1,9 @@
 import { ComponentType, PropsWithChildren, ProviderProps, ReactElement } from 'react'
+import { BrowserRouter as Router } from 'react-router-dom'
 
-type IProviderOrWithValue<T = any> = ComponentType<T> | [ComponentType<T>, T]
+type IProviderOrWithValue<T = any> = ComponentType<T> | [ComponentType<T>, T?]
 
-export const combineProviders =
+export const combine =
   (providers: Array<IProviderOrWithValue>) =>
   ({ children }: PropsWithChildren<{ value?: unknown[] }>) =>
     providers.reduceRight<ReactElement<ProviderProps<unknown>>>((tree, ProviderOrWithValue) => {
@@ -13,4 +14,4 @@ export const combineProviders =
         return <ProviderOrWithValue>{tree}</ProviderOrWithValue>
       }
     }, children as ReactElement)
-export const AllProviders = combineProviders([])
+export const AllProviders = combine([[Router]])

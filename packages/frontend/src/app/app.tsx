@@ -1,1 +1,7 @@
-export const Application = () => <div className={'text-3xl text-gray-600'}>App</div>
+import { routes } from './app.routing'
+import { useRoutes } from 'react-router-dom'
+
+export const Application = () => {
+  const appRouting = useRoutes(routes)
+  return <>{appRouting}</>
+}
