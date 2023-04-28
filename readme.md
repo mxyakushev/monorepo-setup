@@ -2,8 +2,6 @@
 
 [![Feature-Sliced Design][shields-fsd-image]](https://feature-sliced.design/)
 
-Mortal Kombat is an American media franchise centered on a series of video games
-
 # Tech stack
 
 ...
