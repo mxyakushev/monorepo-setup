@@ -1,4 +1,4 @@
-# Mortal Combat
+# setup
 
 [![Feature-Sliced Design][shields-fsd-image]](https://feature-sliced.design/)
 
